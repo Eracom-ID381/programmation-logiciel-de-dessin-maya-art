@@ -21,13 +21,16 @@ function setup() {
     function draw() {
 
         sphere(30);
-        erase();
+        erase(0);
         rotateY(frameCount * 0.02);
         translate(0, 0, 40);
         torus(15, 5);
         noErase();
     }
 }
+
+
+
 
 function draw() {
     hue = map(mouseX, 0, width, 0, 255);
@@ -44,7 +47,7 @@ function draw() {
 
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
-    background(0);
+    background(1000, 1000, 1000);
 }
 
 function mousePressed() {
